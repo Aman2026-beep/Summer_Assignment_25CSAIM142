@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <stdio.h>
 
 int main() {
@@ -31,4 +32,39 @@ int main() {
 
     printf("\n");
     return 0;
+=======
+#include <stdio.h>
+
+int main() {
+    int start, end, i, j, isPrime;
+
+    printf("Enter the starting number: ");
+    scanf("%d", &start);
+    printf("Enter the ending number: ");
+    scanf("%d", &end);
+
+    printf("Prime numbers between %d and %d are:\n", start, end);
+
+    for (i = start; i <= end; i++) 
+    {
+        if (i <= 1) {
+            continue;
+        }
+
+           isPrime = 1; 
+        for (j = 2; j <= i / 2; j++) {
+            if (i % j == 0) {
+                isPrime = 0; 
+                break;
+            }
+        }
+        if (isPrime == 1)
+        {
+            printf("%d ", i);
+        }
+    }
+
+    printf("\n");
+    return 0;
+>>>>>>> c11e7b1 (Saving my summer task progress)
 }
